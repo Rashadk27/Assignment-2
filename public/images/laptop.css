@@ -1,0 +1,41 @@
+  /* Main wrapper container centers content sets width and minimum height */
+
+  
+  
+  #wrapper { 
+  width: 80%;
+  margin: 0 auto;
+  min-height: 800px;
+}
+/* Left column floats to left takes a third of width minimum height and includes padding in width */
+
+#left-column {
+  float: left;
+  width: 32%;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+/* Right column floats to right takes most of width minimum height and includes padding in width */
+
+#right-column {
+  float: right;
+  width: 65%;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+/* Project list container holds all projects adds space below */
+
+.project-list {
+  overflow: auto;
+  margin-bottom: 60px;
+}
+/* Individual project box floats left takes almost half width has minimum width and margin around */
+
+.project {
+  float: left;
+  width: 46%;
+  min-width: 300px;
+  margin: 2%;
+  box-sizing: border-box;
+}
