@@ -1,36 +1,5 @@
-/* ====== BASIC COLOUR SCHEME ====== */
-body {
-  background-color: #f0f4f8; /* light silver-blue background */
-  color: #1a1a1a;
-}
+.text-center_py-4_bg-dark
+{
 
-/* ====== HEADER / NAVBAR ====== */
-header, .navbar {
-  background-color: #1e3a8a; /* deep blue */
-  color: white;
-}
-
-.navbar a {
-  color: white !important;
-}
-
-.navbar a:hover {
-  color: #a0c4ff !important; /* soft light blue hover */
-}
-
-/* ====== FOOTER ====== */
-footer {
-  background-color: #1e3a8a; /* match header */
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-footer a {
-  color: #a0c4ff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ffffff;
+    color: blue;
 }
