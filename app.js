@@ -18,6 +18,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap'));
+app.use('/fortawesome', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
+app.use('/popper.js', express.static(__dirname + '/node_modules/popper.js/dist/popper.min.js'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -35,7 +40,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', {title:'Error'});
 });
 
 module.exports = app;
