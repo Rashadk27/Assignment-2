@@ -1,134 +1,206 @@
 <%- include('./partials/header.ejs') %>
+    <!-- main navigation page with aprtials  -->
+    <%- include('./partials/navbar.ejs') %>
 
-<!-- Navbar -->
-<%- include('./partials/navbar.ejs') %>
+        <!-- home page from previous assigment -->
+        <section id="home" class="hero-section d-flex align-items-center justify-content-center">
+            <!-- introudction for myselff -->
+            <div class="hero-card text-center">
+                <!-- profile image in public folders -->
+                <img src="/images/pfp.jpg" alt="Rashad profile" class="hero-avatar mb-3" width="180" height="180">
+                <h1 class="display-5">Rashad Khan</h1>
+                <p class="lead">Networking IT Security student • Car detailing entrepreneur</p>
 
-<!-- Home Section -->
-<section id="home" class="homediv">
-    <h1>Welcome to My Portfolio</h1>
-    <p class="wlcm">Hello! I’m Rashad. Check out my projects and contact me below.</p>
-</section>
 
-<!-- About Section -->
-<section id="about" class="aboutpg">
-    <figure class="aboutimg">
-        <img src="/images/pfp.jpg" width="300" height="300" alt="profile picture">
-        <figcaption class="aboutcaption">
-            Hi there, my name is Rashad. I own a Car Detailing Business and I'm a 2nd-year student at Ontario Tech University studying Networking and IT Security.
-        </figcaption>
-    </figure>
+                <!-- here we have three links for easy contact which include github email and linkden so makes it easier for viwer -->
 
-    <aside class="aboutvideo">
-        <video id="video" width="300" height="300" controls autoplay muted loop poster="/images/videocover.jpeg" preload="auto">
-            <source src="/images/video.mp4" type="video/mp4">
-        </video>
-        <br>
-        <button onclick="playPause()">Play or Pause the Video</button>
-    </aside>
-</section>
+                <div class="hero-links mt-3">
+                    <a href="mailto:rashadk0527@gmail.com" class="me-3"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://github.com/Rashadk27/Assignment-2" target="_blank" class="me-3"><i
+                            class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/rashad-khan-028847384/" target="_blank"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
 
-<!-- Projects Section -->
-<section id="projects" class="projectpg mainpj">
-    <header>
-        <h1>My Projects</h1>
-        <p class="four">These are four of my projects I have completed in the past.</p>
-    </header>
+                <p class="mt-4 small text-muted">Welcome! scroll down to see projects and how to contact me.</p>
+            </div>
+        </section>
 
-    <section class="projectslist">
-        <article class="project">
-            <h2>Woodworking Project</h2>
-            <figure>
-                <img src="/images/woodtable.jpeg" width="200" height="200" class="wood" alt="Project 1">
-                <figcaption>
-                    A portable wooden table I built in woodworking class. Foldable and neatly finished.
-                </figcaption>
-            </figure>
-        </article>
+        <!-- about page from previous assignemnt-->
+        <section id="about" class="section-about py-5">
+            <div class="container d-flex flex-lg-row flex-column align-items-center gap-4">
+                <!-- putting image to the left with caption -->
+                <figure class="profile-panel mb-3 mb-lg-0 text-center">
+                    <img src="/images/pfp.jpg" alt="Profile picture" class="profile-img rounded-circle" width="260"
+                        height="260">
+                    <figcaption class="mt-3 profile-caption">
+                        Hi — Im Rashad. I run a car-detailing business and Im studying Networking IT Security at Ontario
+                        Tech.
+                    </figcaption>
+                </figure>
 
-        <article class="project">
-            <h2>Car Detailing Logo</h2>
-            <figure>
-                <img src="/images/rivo.png" width="200" height="200" class="rivo" alt="Project 2">
-                <figcaption>
-                    Logo for my car detailing business designed in Adobe Illustrator inspired by the Nissan Skyline R34.
-                </figcaption>
-            </figure>
-        </article>
+                <!-- video with js video function from other assignemnt its in the public folder  -->
+                <div class="bio-video flex-fill">
+                    <h2 class="h4">About Me</h2>
+                    <p>I enjoy hands-on technical work, web development, and building projects that combine networking
+                        with security practices.</p>
 
-        <article class="project">
-            <h2>Phone Project</h2>
-            <figure>
-                <img src="/images/phone.jpeg" width="200" height="200" class="phone" alt="Project 3">
-                <figcaption>
-                    Repaired a fully damaged iPhone 7, restoring it to full functionality.
-                </figcaption>
-            </figure>
-        </article>
+                    <div class="video-box mt-3">
+                        <video id="introVideo" class="w-100" controls autoplay muted loop
+                            poster="/images/videocover.jpeg" preload="auto">
+                            <source src="/images/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="mt-2">
+                            <button class="btn btn-outline-secondary btn-sm" id="toggleVideoBtn">Play / Pause</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <article class="project">
-            <h2>Essay</h2>
-            <figure>
-                <img src="/images/essay.png" width="200" height="200" class="essay" alt="Project 4">
-                <figcaption>
-                    English project with written analysis, presentation, speech, and video analysis.
-                </figcaption>
-            </figure>
-        </article>
-    </section>
-</section>
+        <!-- projects page from previous assignemnt -->
+        <section id="projects" class="section-projects py-5 bg-light">
+            <div class="container">
+                <header class="mb-4 text-center">
+                    <h2 class="h3">Selected Projects</h2>
+                    <p class="text-muted">Coursework and personal work that showcases my skills.</p>
+                </header>
 
-<!-- Contact Section -->
-<section id="contact" class="bcontact contactwrapper">
-    <h1 class="contact">Send Any Questions, Comments or Project Related Inquiries</h1>
-    <form action="mailto:rashadk0527@gmail.com?subject=Feedback%20Form" enctype="text/plain" method="post" name="Form">
-        <p class="Fname">
-            <label for="FnameInput">First Name:</label>
-            <input type="text" name="Fname" id="FnameInput" size="25" placeholder="i.e Jon" required>
-        </p>
+                <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                    <div class="col d-flex">
+                        <article class="card project-card flex-fill">
+                            <img src="/images/woodtable.jpeg" class="card-img-top project-thumb" alt="Woodworking">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Woodworking Project</h3>
 
-        <p class="Lname">
-            <label for="LnameInput">Last Name:</label>
-            <input type="text" name="Lname" id="LnameInput" size="25" placeholder="i.e Doe" required>
-        </p>
+                                <p class="card-text">Built a portable wooden table — foldable, sturdy, and finished for
+                                    storage.</p>
+                            </div>
+                        </article>
+                    </div>
 
-        <p class="email">
-            <label for="EmailInput">Email:</label>
-            <input type="email" name="Email" id="EmailInput" size="30" placeholder="i.e jondoe@gmail.com" required>
-        </p>
+                    <div class="col d-flex">
+                        <article class="card project-card flex-fill">
+                            <img src="/images/rivo.png" class="card-img-top project-thumb" alt="Logo">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Car Detailing Logo</h3>
 
-        <p class="Phone">
-            <label for="PhoneInput">Phone Number:</label>
-            <input type="tel" name="Phone" id="PhoneInput" size="25" placeholder="i.e ###-###-####" required inputmode="numeric" pattern="\d{3}\d{3}\d{4}">
-        </p>
+                                <p class="card-text">Logo design created in Adobe Illustrator, inspired by Nissan R34
+                                    colours.</p>
+                            </div>
+                        </article>
+                    </div>
 
-        <p class="Message">
-            <label for="MessageInput">Message:</label><br>
-            <textarea name="Message" id="MessageInput" rows="15" cols="85"></textarea>
-        </p>
+                    <div class="col d-flex">
+                        <article class="card project-card flex-fill">
+                            <img src="/images/phone.jpeg" class="card-img-top project-thumb" alt="Phone repair">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Phone Repair</h3>
 
-        <p>
-            <input type="submit" value="Submit">
-        </p>
-    </form>
-</section>
+                                <p class="card-text">Repaired an iPhone 7 with extensive hardware damage — restored to
+                                    full working condition.</p>
+                            </div>
+                        </article>
+                    </div>
 
-<%- include('./partials/footer.ejs') %>
+                    <div class="col d-flex">
+                        <article class="card project-card flex-fill">
+                            <img src="/images/essay.png" class="card-img-top project-thumb" alt="Essay project">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Multimedia Essay Project</h3>
 
-<!-- Optional: Smooth Scroll JS -->
-<script>
-  document.querySelectorAll('a.nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target){
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-  });
+                                <p class="card-text">Developed a multi-part English project: essay, presentation,
+                                    speech, and video analysis.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  function playPause() {
-    var vid = document.getElementById("video");
-    if (vid.paused) vid.play();
-    else vid.pause();
-  }
-</script>
+        <!-- contact page function with the required form too-->
+        <section id="contact" class="section-contact py-5">
+            <div class="container">
+                <div class="contact-card mx-auto" style="max-width:720px;">
+                    <h2 class="h4 text-center mb-3">Contact Me</h2>
+                    <form action="mailto:rashadk0527@gmail.com?subject=Portfolio%20Contact" method="post"
+                        enctype="text/plain" class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input id="firstName" name="Fname" class="form-control" required placeholder="Jon">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input id="lastName" name="Lname" class="form-control" required placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input id="email" name="Email" type="email" class="form-control" required
+                                    placeholder="you@example.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input id="phone" name="Phone" type="tel" class="form-control" required
+                                    placeholder="###-###-####">
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="Message" rows="6" class="form-control"></textarea>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- button functionality to scroll back up to top page -->
+        <button id="toTopBtn" class="btn btn-dark" title="Back to top"
+            style="position:fixed;right:16px;bottom:20px;display:none;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- foorter partials added  -->
+        <%- include('./partials/footer.ejs') %>
+
+            <!-- for video control and scrollign as well-->
+            <script>
+                (function () {
+                    // added for smooth navigation scrolling
+                    document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
+                        link.addEventListener('click', function (e) {
+                            const target = document.querySelector(this.getAttribute('href'));
+                            if (target) {
+                                e.preventDefault();
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        });
+                    });
+
+                    // video play/pause toggle (was having issues with the video.js function in public folder so i added this instead)
+                    const video = document.getElementById('introVideo') || document.getElementById('video');
+                    const toggleBtn = document.getElementById('toggleVideoBtn');
+                    if (toggleBtn && video) {
+                        toggleBtn.addEventListener('click', () => {
+                            if (video.paused) video.play(); else video.pause();
+                        });
+                    }
+
+                    // buttton made to go back to top scrolled back up in a smooth behaviour
+                    const topBtn = document.getElementById('toTopBtn');
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY > 400) topBtn.style.display = 'block';
+                        else topBtn.style.display = 'none';
+                    });
+                    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+                })();
+            </script>
