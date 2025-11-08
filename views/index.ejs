@@ -97,7 +97,6 @@
                             <img src="/images/phone.jpeg" class="card-img-top project-thumb" alt="Phone repair">
                             <div class="card-body">
                                 <h3 class="card-title h5">Phone Repair</h3>
-
                                 <p class="card-text">Repaired an iPhone 7 with extensive hardware damage — restored to
                                     full working condition.</p>
                             </div>
@@ -109,7 +108,6 @@
                             <img src="/images/essay.png" class="card-img-top project-thumb" alt="Essay project">
                             <div class="card-body">
                                 <h3 class="card-title h5">Multimedia Essay Project</h3>
-
                                 <p class="card-text">Developed a multi-part English project: essay, presentation,
                                     speech, and video analysis.</p>
                             </div>
@@ -163,16 +161,12 @@
             </div>
         </section>
 
-        <!-- button functionality to scroll back up to top page -->
-        <button id="toTopBtn" class="btn btn-dark" title="Back to top"
-            style="position:fixed;right:16px;bottom:20px;display:none;">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+       
 
         <!-- foorter partials added  -->
         <%- include('./partials/footer.ejs') %>
 
-            <!-- for video control and scrollign as well-->
+            <!-- for video control a-->
             <script>
                 (function () {
                     // added for smooth navigation scrolling
@@ -195,7 +189,7 @@
                         });
                     }
 
-                    // buttton made to go back to top scrolled back up in a smooth behaviour
+                    // buttton made to go back to top scrolled back up in a smooth behaviour(had to remove this as it wasnt functionign as i wanted it to)
                     const topBtn = document.getElementById('toTopBtn');
                     window.addEventListener('scroll', () => {
                         if (window.scrollY > 400) topBtn.style.display = 'block';

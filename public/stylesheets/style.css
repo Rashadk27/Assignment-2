@@ -1,166 +1,36 @@
-/* ========================
-   GENERAL STYLES
-======================== */
-
-/* Body background and smooth scrolling */
+/* ====== BASIC COLOUR SCHEME ====== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* smooth scrolling for anchor links */
+  background-color: #f0f4f8; /* light silver-blue background */
+  color: #1a1a1a;
 }
 
-/* Headings */
-h1 {
-    color: #fff; /* main headings white */
-    text-align: center;
-    margin-bottom: 20px;
+/* ====== HEADER / NAVBAR ====== */
+header, .navbar {
+  background-color: #1e3a8a; /* deep blue */
+  color: white;
 }
 
-h2 {
-    color: #fff; /* subheadings white */
-    font-size: 18px;
-    margin-bottom: 10px;
+.navbar a {
+  color: white !important;
 }
 
-/* ========================
-   NAVBAR
-======================== */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* ensures navbar stays on top */
+.navbar a:hover {
+  color: #a0c4ff !important; /* soft light blue hover */
 }
 
-.navbar .nav-link {
-    color: #fff !important; /* force white links */
-}
-
-.navbar .nav-link:hover {
-    color: #0d6efd !important; /* Bootstrap blue hover */
-}
-
-/* Give space so content isn’t hidden under navbar */
-body {
-    padding-top: 70px; /* adjust based on navbar height */
-}
-
-/* ========================
-   HOME SECTION
-======================== */
-.homediv {
-    height: 100vh; /* full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #127369;
-}
-
-.wlcm {
-    font-size: 22px;
-    color: #fff;
-}
-
-/* ========================
-   ABOUT SECTION
-======================== */
-.aboutpg {
-    background: linear-gradient(to right, #127369, #10403B);
-    padding: 50px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.aboutimg img {
-    border-radius: 10px;
-}
-
-.aboutcaption {
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    max-width: 300px;
-}
-
-/* ========================
-   PROJECTS SECTION
-======================== */
-.projectpg {
-    background-color: #fff;
-    padding: 50px 20px;
-}
-
-.projectslist {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.project {
-    background-color: #127369;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 220px;
-    text-align: center;
-}
-
-.project img {
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-/* ========================
-   CONTACT SECTION
-======================== */
-.bcontact {
-    background: linear-gradient(45deg, #10403B, #BFBFBF);
-    padding: 50px 20px;
-    color: #000;
-}
-
-.contactwrapper form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.contactwrapper input,
-.contactwrapper textarea {
-    width: 300px;
-    padding: 8px;
-    font-size: 16px;
-}
-
-/* Submit button */
-.contactwrapper input[type="submit"] {
-    width: 120px;
-    background-color: #127369;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contactwrapper input[type="submit"]:hover {
-    background-color: #0d5347;
-}
-
-/* ========================
-   FOOTER
-======================== */
+/* ====== FOOTER ====== */
 footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
+  background-color: #1e3a8a; /* match header */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  color: #a0c4ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
 }
